@@ -1,9 +1,9 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../hooks";
 import { increment } from "./counterSlice";
 
 export const Counter = () => {
-  const dispatch = useDispatch();
-  const count = useSelector((state: any) => state.counter.value);
+  const dispatch = useAppDispatch();
+  const count = useAppSelector((state) => state.counter.value);
 
   return (
     <>
