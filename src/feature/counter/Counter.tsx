@@ -28,7 +28,29 @@ export const Counter = () => {
       disabled: incrementOn,
     },
   ];
-  const buttons = buttonsData.map((data) => (
+
+  return (
+    <>
+      <h1>Count</h1>
+      <h2>{count}</h2>
+      <div className={classes.buttonSetContainer}>
+        <ButtonList data={buttonsData} />
+      </div>
+    </>
+  );
+};
+
+type ButtonData = {
+  text: string;
+  onClick: () => void;
+  disabled?: boolean;
+};
+type ButtonListProps = {
+  data: ButtonData[];
+};
+
+const ButtonList = (props: ButtonListProps) =>
+  props.data.map((data) => (
     <button
       id={data.text}
       onClick={data.onClick}
@@ -37,12 +59,3 @@ export const Counter = () => {
       {data.text}
     </button>
   ));
-
-  return (
-    <>
-      <h1>Count</h1>
-      <h2>{count}</h2>
-      <div className={classes.buttonSetContainer}>{buttons}</div>
-    </>
-  );
-};
