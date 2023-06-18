@@ -1,11 +1,9 @@
 import { Counter } from "./feature/counter";
 
-function App() {
+export const App = () => {
   return (
     <>
       <Counter />
     </>
   );
-}
-
-export default App;
+};
