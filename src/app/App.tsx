@@ -1,4 +1,4 @@
-import { Counter } from "./feature/counter";
+import { Counter } from "../feature/counter";
 
 export const App = () => {
   return (

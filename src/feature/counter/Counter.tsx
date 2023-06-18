@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../../hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import {
   increment,
   decrement,

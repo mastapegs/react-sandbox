@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk, RootState } from "../../store";
+import { AppThunk, RootState } from "../../app/store";
 
 type CounterState = { value: number; incrementOn: boolean };
 const initialState: CounterState = { value: 0, incrementOn: false };
